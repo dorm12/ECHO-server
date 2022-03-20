@@ -10,18 +10,10 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "@typescript-eslint/strict-boolean-expressions": [
-            2,
-            {
-                "semicolon" : true,
-                "allowString" : false,
-                "allowNumber" : false,
-                "prefer-const" : [true, {"destructuring": "any"}],
-                "quotemark" : "double",
-                "no-any" : true,
-                "no-trailing-whitespace" : true
-            }
-        ]
+                "semi" : [2, "always"],
+                "prefer-const" : [2, {"destructuring": "any"}],
+                "quotes" : [2, "double"]
+                               
     },
     "ignorePatterns": ["src/**/*.test.ts", "src/frontend/generated/*"]
 }
