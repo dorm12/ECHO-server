@@ -1,9 +1,13 @@
 import * as express from "express";
-import { echo_handlerer } from "./echo_handler/echo_handler";
-import { dor_handlerer } from "./dor_handler/dor_handler";
+import initAllHandlers from "./initializer";
+import Handler from "./handlers/BaseHandler/BaseHandler";
+
 const app = express();
 
-app.get("/dor", dor_handlerer);
-app.get("/*", echo_handlerer);
+const handlers: Handler[] = initAllHandlers();
+
+handlers.forEach((elem) =>{
+    app.get(elem.path, elem.getHandler);
+});
 
 export default app;
