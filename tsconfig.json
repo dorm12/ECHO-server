@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+      "preserveConstEnums": true,
+      "outDir": "output"
+    },
+    "include": ["src/*"],
+    "exclude": ["node_modules", "**/*.spec.ts"]
+  }
+
+  
